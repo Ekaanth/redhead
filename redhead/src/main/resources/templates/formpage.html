@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:replace="common/header :: common-header"/>
+<body roleId="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+ <div class="bg-danger" th:if="${success}">
+        	Thanks For Your Feedback!!!
+        </div>
+        
+
+<div class="container">
+    <div class="row main">
+        <div class="panel-heading">
+            <div class="panel-title text-center">
+                <h1 class="title">User Details</h1>
+                <hr />
+            </div>
+        </div>
+        <div class="main-login main-center">
+            <form class="form-horizontal" method="POST" th:action="@{/userdetails}" >
+
+                 <input type="hidden" name="id" th:value="${catering.id}" />
+                 
+                 <div class="form-group">
+                    <label for="articler_title">Enter your Name</label>
+                    <input type="text" class="form-control" th:value="${catering.name}" name="name"
+                           id="name" placeholder="Enter your Name"/>
+                </div>
+                
+                <div class="form-group">
+                    <label for="articler_title">Contact Number</label>
+                    <input type="text" class="form-control" th:value="${catering.mobileno}" name="mobileno"
+                           id="mobileno" placeholder="Enter your Mobile Number"/>
+                </div>
+                
+                
+                
+               
+                <div class="form-group ">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Next</button>
+                </div>
+                
+                <hr />
+                
+				<div class="form-group ">
+                    <a  class="btn btn-info btn-lg btn-block login-button" th:href="@{/}">Reset</a>
+                </div>
+            </form>
+            
+             <form class="form-horizontal" th:action="@{/userdeatils/all}">
+            
+             <div class="form-group ">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button">End Catering</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div th:replace="common/header :: body-bottom-scripts"></div>
+</body>
+</html>

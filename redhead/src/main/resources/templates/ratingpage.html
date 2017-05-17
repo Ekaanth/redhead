@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header"/>
+
+<body>
+    
+    
+            
+          <form class="form-horizontal" method="get" th:action="@{/userdetails/rating/verygood}">
+          <div class="main-center">
+            
+            
+     <input type="hidden" name="id" th:value="${cateringId}" />
+           
+               <img class="img-responsive" src="/images/yum.png" alt="banner" width="200px" height="200px"/>
+             <div class="form-group ">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >Very Good</button>
+                </div>       
+            </div>
+            </form>
+          
+      
+      		 <form class="form-horizontal" method="get" th:action="@{/userdetails/rating/good}">
+          
+     	    <input type="hidden" name="id" th:value="${cateringId}" />
+      		<div class="main-center">
+            <img class="img-responsive" src="/images/good.jpg" alt="banner" width="200px" height="200px" />
+            <div class="form-group ">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >Good</button>
+                </div>
+                 
+            </div>
+            </form>
+            
+            
+             <form class="form-horizontal" method="get" th:action="@{/userdetails/rating/average}">        
+            <div class="main-center">
+            
+     	    <input type="hidden" name="id" th:value="${cateringId}" />
+               <img class="img-responsive" src="/images/average.jpg" alt="banner" width="200px" height="200px"/>
+             <div class="form-group ">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >Average</button>
+                </div>
+            </div>
+            </form>
+            
+            
+             <form class="form-horizontal" method="get" th:action="@{/userdetails/rating/belowaverage}">
+             <div class="main-center">
+            
+     		<input type="hidden" name="id" th:value="${cateringId}" />
+               <img class="img-responsive" src="/images/belowaverage.jpg" alt="banner" width="200px" height="200px" />
+             <div class="form-group ">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button" >below average</button>
+                </div>      
+            </div>
+          </form>  
+            
+            
+             <form class="form-horizontal" method="get" th:action="@{/userdetails/rating/bad}">
+            <div class="main-center">
+            
+     		<input type="hidden" name="id" th:value="${cateringId}" />
+               <img class="img-responsive" src="/images/bad.png" alt="banner" width="200px" height="200px" />
+           <div class="form-group ">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button">bad</button>
+                </div>        
+            </div>
+          </form> 
+<div th:replace="common/header :: body-bottom-scripts"></div>
+</body>
+</html>

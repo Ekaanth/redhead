@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header"/>
+
+<body>
+<!-- Login Section -->
+   
+          <div class="main-center">
+            
+               <img class="img-responsive" src="/images/yum.png" alt="banner" width="200px" height="200px" />
+             <div class="form-group ">
+                  <h3>  <a th:text="${verygood}"></a> </h3>  
+                </div>       
+            </div>
+          
+          
+          
+      		<div class="main-center">
+            <img class="img-responsive" src="/images/good.jpg" alt="banner" width="200px" height="200px" />
+            <div class="form-group ">
+                  <h3>  <a th:text="${good}"></a> </h3>  </div>
+                 
+            </div>
+            
+            
+               <div class="main-center">
+            
+               <img class="img-responsive" src="/images/average.jpg" alt="banner" width="200px" height="200px"/>
+             <div class="form-group ">
+                <h3>  <a th:text="${average}"></a> </h3>  </div>
+            </div>
+            
+            
+               <div class="main-center">
+            
+               <img class="img-responsive" src="/images/belowaverage.jpg" alt="banner" width="200px" height="200px" />
+             <div class="form-group ">
+                  <h3>  <a th:text="${belowaverage}"></a> </h3>   </div>      
+            </div>
+             
+            
+            <div class="main-center">
+            
+               <img class="img-responsive" src="/images/bad.png" alt="banner" width="200px" height="200px" />
+           <div class="form-group ">
+                  <h3>  <a th:text="${bad}"></a> </h3> </div>        
+            </div> 
+            
+            <form class="form-horizontal" th:action="@{/welcome}">
+            
+             <div class="form-group ">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Start New Catering</button>
+                </div>
+            </form>
+            
+<div th:replace="common/header :: body-bottom-scripts"></div>
+</body>
+</html>
